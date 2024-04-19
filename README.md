@@ -6,7 +6,9 @@ This is a simple chat app you can use to chat with your friends. This uses socke
 
 # Preview
 
-To test it out click -> [here](https://paysonism.github.io/1337-Chat/). Make an account and try searching for "Payson" and messaging me!
+To test it out click [here](https://paysonism.github.io/1337-Chat/). Make an account and try searching for "Payson" and messaging me!
+
+Screenshot Previews:
 
 ![Login Page](https://i.ibb.co/zZJ0wwS/image.png)
 
