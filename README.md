@@ -28,7 +28,7 @@ This is a list of the features I have already finished and some I am currently w
 - [X] Logout
 - [X] Direct Messaging
 - [X] Users Search
-- [ ]‎‎‎‎ Group Chats
+- [ ] Group Chats
 - [ ] Voice Calling
 - [ ] Video Calling
 - [ ] Friends System
