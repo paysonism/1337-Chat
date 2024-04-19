@@ -2,9 +2,17 @@
 
 This is a simple chat app you can use to chat with your friends. This uses socket.io for the server.
 
+**Want a version for local builds and beta testing? Click [here](https://github.com/paysonism/1337-Chat-Development) to view the development repository.**
+
 # Preview
 
-A live preview and screenshots will be available when I finish the beta version
+To test it out click -> [here](https://paysonism.github.io/1337-Chat/). Make an account and try searching for "Payson" and messaging me!
+
+![Login Page](https://i.ibb.co/zZJ0wwS/image.png)
+
+![Home Page](https://i.ibb.co/PGnXtc6/image.png)
+
+![Chat Page](https://i.ibb.co/qj7Qvjp/image.png)
 
 # Installation
 
