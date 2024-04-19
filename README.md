@@ -29,14 +29,22 @@ This is a list of the features I have already finished and some I am currently w
  **Please make a pull request if you implement any of these features before me!!!** 
 
 [X] Login
+
 [X] Register
+
 [X] Logout
+
 [X] Direct Messaging
+
 [X] Users Search
-[ ] Group Chats
-[ ] Voice Calling
-[ ] Video Calling
-[ ] Friends System
+
+[‎‎‎‎‎‎‎‎ㅤ] Group Chats
+
+[‎‎‎‎‎‎‎‎ㅤ] Voice Calling
+
+[‎‎‎‎‎‎‎‎ㅤ] Video Calling
+
+[‎‎‎‎‎‎‎‎ㅤ] Friends System
 
 # Credits
 
