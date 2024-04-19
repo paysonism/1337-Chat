@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>1337 - Login</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/2a66bc2625.js"
+            crossorigin="anonymous"
+            ;
+        ></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Rubik:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/login.css" />
+    </head>
+
+    <body>
+        <div class="outer_div">
+            <h1 style="margin-bottom: 20px">1337</h1>
+            <div class="container" id="container">
+                <div class="form-container sign-up-container">
+                    <form id="signUpForm">
+                        <h1 class="title_h1">Register</h1>
+                        <span id="email_span"
+                            >* The info you enter will be used as your login *</span
+                        >
+                        <input
+                            type="text"
+                            id="signUpName"
+                            name="name"
+                            placeholder="Username"
+                            required
+                        />
+                        <input
+                            type="email"
+                            id="signUpEmail"
+                            name="email"
+                            placeholder="Email"
+                            required
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            id="signUpPassword"
+                            placeholder="Password"
+                            required
+                        />
+                        <input
+                            type="url"
+                            name="url"
+                            id="signUpUrl"
+                            placeholder="Profile Photo URL"
+                        />
+                        <button>Sign up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in-container">
+                    <form id="loginForm">
+                        <h1 class="title_h1" style="margin-bottom: 10px">
+                            Sign in
+                        </h1>
+                        <input
+                            type="email"
+                            name="email"
+                            id="loginEmail"
+                            placeholder="Email"
+                            required
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            id="loginPassword"
+                            placeholder="Password"
+                            required
+                        />
+                        <!-- <a id="anchor_tag" href="#">Forgot your password?</a> - This has not been implemented yet. - -->
+                        <button>Sign in</button>
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1 class="title_h1">Glad to have you!</h1>
+                            <p class="p_tag">
+                                Please enter your desired login credentials and get ready for awesomeness!!!
+                            </p>
+                            <button class="ghost" id="signIn">Sign in</button>
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <h1 class="title_h1">Welcome Back!</h1>
+                            <p class="p_tag">
+                                Enter in your login credentials or create an account to get started!
+                            </p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.all.min.js"></script>
+        <script src="./script/login.js"></script>
+    </body>
+</html>
