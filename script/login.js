@@ -40,7 +40,7 @@ signupForm.addEventListener("submit", (e) => {
 
 const register = async (payload) => {
     try {
-        const res = await fetch("http://localhost:1337/user/signup", {
+        const res = await fetch("https://one337-chat-server.onrender.com/user/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -87,7 +87,7 @@ loginForm.addEventListener("submit", (e) => {
 
 const login = async (payload) => {
     try {
-        const res = await fetch("http://localhost:1337/user/login", {
+        const res = await fetch("https://one337-chat-server.onrender.com/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
