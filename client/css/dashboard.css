@@ -1,0 +1,293 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+.send{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    /* border: 1px solid black;s */
+    text-align: end;
+    background-color:#9400b2;
+    color: #e9edef;
+    border: 1px solid black;
+}
+.receive{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    /* border: 1px solid black; */
+    text-align: start;
+    color: #fff;
+    background-color: rgb(53, 52, 52);
+    border: 1px solid black;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    align-items: center;
+    background-color: #332033;
+    color: white;
+}
+#profile_section {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+#profile_pic {
+    border-radius: 50%;
+}
+#mainDiv {
+    padding: 10px;
+    width: 100%;
+    background-color: #462b4b;
+    border-bottom: 1px solid #3f1a44;
+}
+#query{
+    background-color: #38223a;
+    outline: none;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+}
+.users_list {
+    padding: 5px 20px;
+    height:82vh;
+    width: 30%;
+    background-color: #462b4b;
+}
+.search_container {
+    width: 100%;
+}
+#search_users_list_container {
+    position: relative;
+}
+#search_users_list{
+    /* display: none; */
+    background-color: rgb(234, 234, 234);
+    position: absolute;
+    border-right : 1px solid rgb(201, 201, 201);
+    width: 30%;
+    z-index: 1;
+    top:0;
+}
+.users_list_container{
+    min-width: 150px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    background-color: #3c2d3e;
+}
+.users_list_container img{
+    border-radius: 50%;
+}
+.users_list_container span{
+    margin-left: 10px;
+    color: white;
+}
+.search_container input {
+    width: 320px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(189, 185, 185);
+    padding: 5px;
+    font-size: 14px;
+}
+.search_container button {
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid rgb(189, 185, 185);
+    padding: 5px 7px;
+    font-size: 14px;
+}
+.users_list_item > img{
+    border-radius: 50%;
+} 
+.users_list_item > p{
+    color: white;
+}
+#searchBtn{
+    padding: 9px;
+    color: white;
+    background-color: #38223A;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#searchBtn:hover{
+    color: #FF00DD;
+}
+
+#usersChat {
+    height: 85vh;
+    padding: 10px;
+    background-image: url("../images/chatbg.png");
+    overflow-y: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#usersChat ul {
+    height: 64vh;
+    padding: 10px;
+    /* background-image: url("../images/chatbg.png"); -- this makes the background repeat sometimes */
+   overflow-y: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#usersChat ul::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #usersChat ul {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+#groupDiv {
+    display: flex;
+    flex-direction: column;
+}
+.users_list_item{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    border-bottom: 1px solid #470f4f;
+    padding-bottom: 10px;
+    margin: 10px 0;
+}
+
+#msgContainer{
+    display: flex;
+}
+#usersProfile{
+    width: 70%;
+    height: 85vh;
+}
+
+#usersHeader{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    background-color: #332033;
+    padding: 20px;
+}
+
+#usersHeader > span {
+    color: white;
+}
+
+#usersHeader > img {
+    border-radius: 50%;
+}
+/* input message stuff */
+
+#usersFooter{
+    padding: 10px;
+    width: 100%;
+    background-color: #2a192a;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+} 
+
+#usersFooter input{
+    width:96%;
+    padding: 8px;
+    border-radius: 3px;
+    outline: none;
+    border: 0;
+    margin-right: 7px;
+    background-color: #332033;
+    color: #a7a7a7;
+}
+
+#usersFooter button{
+    margin: auto;
+    width: 40px;
+     padding: 8px;
+     background-color: #462B4B;
+     color: white;
+     outline: none;
+     border: none;
+     border-radius: 3px;
+}
+
+#usersFooter button i{
+    color: rgb(255, 255, 255);
+}
+
+li{
+    list-style: none;
+}
+
+@media only screen and (max-width: 700px) {
+    #usersProfile{
+        width: 68%;
+    }
+    #usersChat > ul > li {
+        font-size: 12px;
+    }
+    .users_list{
+        width: 32%;
+        font-size: 14px;
+    }
+    #usersHeader{
+        font-size: 14px;
+    }
+    .users_list img{
+        width: 40px;
+        height: 40px;
+    }
+  }
+  @media only screen and (max-width: 500px){
+    #usersProfile{
+        width: 100%;
+    }
+    .users_list{
+        width: 5%;
+        font-size: 12px;
+        display: none;
+    }
+    .search_container{
+        display: flex;
+        gap: 5px;
+    }
+    #left_half , #profile_name{
+        font-size: 18px !important;
+    }
+  }
+
+  .chat-container .messages .send {
+    max-width: 80%;
+}
+
+li {
+    display: inline-block;
+}

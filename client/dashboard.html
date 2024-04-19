@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/dashboard.css" />
+        <script
+            src="https://kit.fontawesome.com/2a66bc2625.js"
+            crossorigin="anonymous"
+            ;
+        ></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>1337 - Chat</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="left_half" style="color: rgb(255, 255, 0)">
+                13<span id="right_half" style="color: #ff00dd">37</span>
+            </h1>
+            <div id="profile_section">
+                <h2 id="profile_name" style="color: rgb(171, 171, 171); font-size: 1rem;"></h2>
+                <img
+                    id="profile_pic"
+                    width="40px"
+                    height="40px"
+                    src=""
+                    alt="profilePic"
+                />
+                <i
+                    id="logout"
+                    style="color: white"
+                    class="fa-solid fa-right-from-bracket"
+                ></i>
+            </div>
+
+
+        </header>
+        <div id="mainDiv">
+            <div class="search_container">
+                <input type="search" id="query" placeholder="Search by Username" />
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <!-- create group -->
+            <!-- <div>
+                <button id="groupBtn">Create Group</button>
+                <div id="groupDiv"></div>
+            </div> -->
+        </div>
+        <div id="search_users_list_container">
+            <div id="search_users_list"></div>
+        </div>
+        <div id="msgContainer">
+            <ul class="users_list">
+                <!-- template of user listing -->
+                <!-- <li class="users_list_item">
+                    <img
+                        id="profile_pic"
+                        width="50px"
+                        height="50px"
+                        src="https://images.unsplash.com/photo-1680266179692-a21c915b0b53?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"
+                        alt="profilePic"
+                    />
+                    <p>Jayesh</p>
+                </li> -->
+            </ul>
+            <div id="usersProfile">
+                <img
+                    src="./images/banner.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                />
+            </div>
+        </div>
+    </body>
+    <script
+        src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"
+    ></script>
+    <script src="./script/dashboard.js"></script>
+</html>
