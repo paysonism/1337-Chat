@@ -15,13 +15,13 @@ const io = new Server(httpServer);
 app.use(express.json());
 app.use(cors());
 app.get("/", (req, res) => {
-    res.send("Server online. Now just make sure your ports are correct in './frontend/scripts' and open index.html");
+    res.send("Server online. Make sure your ports are correct in '/scripts' - Made By Payson - github.com/paysonism");
 });
 app.use("/user", userRoutes);
 app.use("/group", groupRoutes);
 const obj = {};
 io.on("connection", (socket) => {
-    console.log("User Joined");
+    console.log("Connection Established");
 
     socket.on("createConnection", (userId) => {
         obj[userId] = socket.id;
@@ -46,15 +46,15 @@ io.on("connection", (socket) => {
         io.to(obj[receiverId]).emit("receivedMsg", msg, senderId);
     });
     socket.on("disconnect", () => {
-        console.log("User Disconnected");
+        console.log("Connection Terminated");
     });
 });
 
 httpServer.listen(process.env.PORT, async () => {
     try {
         await connection;
-        console.log("Successfully Connected to the 1337 Database.");
-        console.log("Server Port: localhost:" + process.env.PORT);
+        console.log("Successfully Connected to the 1337 Server");
+        console.log("Server Port: " + process.env.PORT);
         console.log("Made By Payson - github.com/paysonism");
     } catch (error) {
         console.log(error);
