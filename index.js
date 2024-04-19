@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(cors());
 app.get("/", (req, res) => {
     res.send("Server online. Now just make sure your ports are correct in './frontend/scripts' and open index.html");
+    window.location.href = "index.html";
 });
 app.use("/user", userRoutes);
 app.use("/group", groupRoutes);
