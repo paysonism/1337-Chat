@@ -78,7 +78,7 @@ logout.addEventListener("click", () => {
 const url = new URLSearchParams(window.location.search);
 const userId = url.get("id");
 
-fetch(`http://localhost:1337/user/alreadyConnectedUser?userId=${userId}`)
+fetch(`https://one337-chat.onrender.com/user/alreadyConnectedUser?userId=${userId}`)
     .then((response) => response.json())
     .then((response) => {
         activeUserName.textContent = response[1];
@@ -167,7 +167,7 @@ function renderConnectedUsers(data) {
         preview.className = "message-preview";
         li.addEventListener("click", () => {
             fetch(
-                `http://localhost:1337/user/getAllMessages?user1=${userId}&user2=${user._id}`
+                `https://one337-chat.onrender.com/user/getAllMessages?user1=${userId}&user2=${user._id}`
             )
                 .then((res) => res.json())
                 .then((res) => {
@@ -183,7 +183,7 @@ socket.emit("createConnection", userId);
 searchBtn.addEventListener("click", () => {
     let search = query.value ? query.value : "";
     fetch(
-        `http://localhost:1337/user/searchUser?search=${search}&userId=${userId}`,
+        `https://one337-chat.onrender.com/user/searchUser?search=${search}&userId=${userId}`,
         {
             method: "GET",
             headers: {
@@ -215,7 +215,7 @@ function renderUsers(users) {
             search_users_list.innerHTML = null;
 
             fetch(
-                `http://localhost:1337/user/getAllMessages?user1=${userId}&user2=${el._id}`
+                `https://one337-chat.onrender.com/user/getAllMessages?user1=${userId}&user2=${el._id}`
             )
                 .then((res) => res.json())
                 .then((res) => {
@@ -231,7 +231,7 @@ function renderUsers(users) {
                         name.textContent = el.name;
                         li.addEventListener("click", () => {
                             fetch(
-                                `http://localhost:1337/user/getAllMessages?user1=${userId}&user2=${el._id}`
+                                `https://one337-chat.onrender.com/user/getAllMessages?user1=${userId}&user2=${el._id}`
                             )
                                 .then((res) => res.json())
                                 .then((res) => {
@@ -269,7 +269,7 @@ function sendMessage(el, input, ul) {
 function createGroup() {
     const url = new URLSearchParams(window.location.search);
     const userId = url.get("id");
-    fetch(`http://localhost:1337/user/allUser?userId=${userId}`)
+    fetch(`https://one337-chat.onrender.com/user/allUser?userId=${userId}`)
         .then((res) => res.json())
         .then((response) => {
             renderGroupUsers(response);
