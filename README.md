@@ -4,7 +4,7 @@ This is a simple chat app you can use to chat with your friends. This uses socke
 
 **Want a version for local builds and beta testing? Click [here](https://github.com/paysonism/1337-Chat-Development) to view the development repository.**
 
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=whodoesntlikefatniggasfrlmfao9988&label=Repo%20views&color=347D39&style=plastic" alt="Repo Views" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=whodoesntlikefatniggasfrlmfao9988&label=Repo%20views&color=brightgreen&style=plastic" alt="Repo Views" /> </p>
 
 # Preview
 
