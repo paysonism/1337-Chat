@@ -14,7 +14,7 @@ userRoutes.post("/signup", async (req, res) => {
     try {
         const userPresent = await UserModel.find({ email: email });
         if (userPresent.size > 0) {
-            return res.status(400).json({ error: "User is already present." });
+            return res.status(400).json({ error: "Email has already been used" });
         }
 
         const hashed_password = bcrypt.hashSync(password, 4);
@@ -26,7 +26,7 @@ userRoutes.post("/signup", async (req, res) => {
         });
         await user.save();
 
-        res.json({ success: "User created successfully" });
+        res.json({ success: "Successfully Registered" });
     } catch (error) {
         res.send({ error: "Something went wrong", error: error.message });
     }
@@ -39,12 +39,12 @@ userRoutes.post("/login", async (req, res) => {
         if (!user) {
             return res
                 .status(400)
-                .json({ error: "username and password is wrong" });
+                .json({ error: "Incorrect Login Credentials" });
         }
 
         const isPasswordMatch = await bcrypt.compare(password, user.password);
         if (!isPasswordMatch) {
-            return res.status(400).json({ error: "Wrong credential" });
+            return res.status(400).json({ error: "Incorrect Login Credentials" });
         }
 
         const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
@@ -56,13 +56,13 @@ userRoutes.post("/login", async (req, res) => {
             { expiresIn: 30000 }
         );
         return res.status(200).json({
-            success: "User login successfully",
+            success: "Logged in!",
             token: token,
             reftoken: reftoken,
             userId: user._id,
         });
     } catch (error) {
-        res.send({ error: "Something went wrong", error: error.message });
+        res.send({ error: "Something went wrong: ", error: error.message });
     }
 });
 
@@ -70,7 +70,7 @@ userRoutes.get("/logout", async (req, res) => {
     const token = req.headers.authorization.split(" ")[1];
     const blacklist = new BlacklistModel({ token });
     await blacklist.save();
-    return res.status(200).json({ message: "User logged out successfully" });
+    return res.status(200).json({ message: "Successfully logged out" });
 });
 userRoutes.get("/allUser", async (req, res) => {
     const { userId } = req.query;
@@ -145,7 +145,7 @@ userRoutes.get("/apiRefresh", async (req, res) => {
 
         res.send({ token });
     } catch (error) {
-        return res.status(403).json({ message: "Login First" });
+        return res.status(403).json({ message: "Please login before using the app" });
     }
 });
 
