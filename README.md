@@ -8,6 +8,8 @@ This is a simple chat app you can use to chat with your friends. This uses socke
 
 To test it out click [here](https://paysonism.github.io/1337-Chat/). Make an account and try searching for "Payson" and messaging me!
 
+See if our public server is online -> [Status Page](https://stats.uptimerobot.com/nOnoUR6JJA)
+
 Screenshot Previews:
 
 ![Login Page](https://i.ibb.co/zZJ0wwS/image.png)
